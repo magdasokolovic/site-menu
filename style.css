@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    font-weight: 400;
+    color: #444;
+}
+
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-bg-grey {
+    background-color: #cfbcbc;
+}
+
+.section-bg-pink {
+    background-color: mistyrose;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    position: relative;
+
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 20px rgba(196, 62, 62, 0.7);
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
+    url(/images/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg);
+    background-size: cover;
+
+    color: #f3f3f3;
+    transition: color 0.5s background-color 0.3s, transform 0.3s box-shadow 0.3s;
+    
+}
+/* Alternative way to develop stuff on hover, for example: */
+/* .card-lifted {
+    transform: translateY(-50px);
+    background-color: black;
+    color: #eeeeee;
+}  */
+
+.card:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    content: '';
+    height: 100%;
+    transition: opacity 0.3s;
+}
+.card:hover {
+    transform: translateY(-5%);
+    background-color: #ddd;
+    /* color: darkgrey; */
+}
+
+.card h1 {
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover h1 {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    /* you make it go to origin position: */
+    transform: translateY(-5%);
+    opacity: 1;
+}
+
+.card:hover::before {
+    /* background-color: rgba(0, 0,px 0, 0.5); */
+    opacity: 1;
+}
