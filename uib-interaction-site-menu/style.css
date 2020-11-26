@@ -1,0 +1,119 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-bg-pink {
+  background-color: mistyrose;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+    background-color: white;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.nav li {
+    list-style-type: none;
+    font-size: 4rem;
+}
+
+.nav:hover li {
+    color: white;
+}
+
+.blue::before {
+    content: '';
+    float: left;
+    background: teal;
+    width: 4%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    
+}
+
+.yellow::before {
+    content: '';
+    float: left;
+    background: yellow;
+    width: 4%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.red::before {
+     content: '';
+    float: left;
+    background: tomato;
+    width: 4%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.cyan::before {
+     content: '';
+    float: left;
+    background: cyan;
+    width: 4%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+
+li:hover {
+  color: white;
+}
+
+.red:hover::before {
+    width: 100%;
+    transition: background-color 2s ease-in;
+}
+
+.blue:hover::before {
+    width: 100%;
+}
+
+.yellow:hover::before {
+    width: 100%;
+}
+
+.cyan:hover::before {
+    width: 100%;
+}
+
+
+
